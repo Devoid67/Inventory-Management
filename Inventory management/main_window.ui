@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainCentral</class>
+ <widget class="QWidget" name="MainCentral">
+  <property name="styleSheet">
+   <string notr="true">QWidget#MainCentral { background: #F3F5F7; }</string>
+  </property>
+  <layout class="QHBoxLayout" name="rootLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="sidebarFrame">
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>230</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#sidebarFrame { background: #1B2A4A; border: none; } QLabel { color: white; background: transparent; } QPushButton { color: white; background: transparent; border: none; border-radius: 8px; text-align: left; padding: 12px 16px; font-size: 11pt; } QPushButton:hover { background: #24355A; } QPushButton:disabled { color: #5B6B8C; }</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <layout class="QVBoxLayout" name="sidebarLayout">
+      <property name="spacing">
+       <number>4</number>
+      </property>
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>16</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="logoLabel">
+        <property name="text">
+         <string>SmartInventory</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px; font-weight: bold; color: white; padding: 4px 8px;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="logoSubtitle">
+        <property name="text">
+         <string>Retail POS</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 9pt; color: #8EA0C0; padding: 0px 8px 8px 8px;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="navBillingBtn">
+        <property name="text">
+         <string>Sales / POS</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #0F766E; color: white; font-weight: bold; padding: 12px 16px; text-align: left; border-radius: 8px;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="navHistoryBtn">
+        <property name="text">
+         <string>Sales History</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="sidebarSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="navExitBtn">
+        <property name="text">
+         <string>Exit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="mainFrame">
+     <property name="minimumSize">
+      <size>
+       <width>300</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget#mainFrame { background: #F3F5F7; }</string>
+     </property>
+     <layout class="QVBoxLayout" name="mainLayout">
+      <property name="leftMargin">
+       <number>25</number>
+      </property>
+      <property name="topMargin">
+       <number>20</number>
+      </property>
+      <property name="rightMargin">
+       <number>25</number>
+      </property>
+      <property name="bottomMargin">
+       <number>20</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="headerTitle">
+        <property name="text">
+         <string>Sales / POS</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 22px; font-weight: bold; color: #1F2937;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="headerSubtitle">
+        <property name="text">
+         <string>Search products and manage the cart</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 10pt; color: #6B7280;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="searchRow">
+        <property name="styleSheet">
+         <string notr="true">QWidget#searchRow { background: transparent; }</string>
+        </property>
+        <layout class="QHBoxLayout" name="searchRowLayout">
+         <property name="spacing">
+          <number>8</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="searchLineEdit">
+           <property name="placeholderText">
+            <string>Search products...</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit { background: white; border: 1px solid #E5E7EB; border-radius: 8px; padding: 10px 12px; font-size: 12pt; color: #1F2937; selection-background-color: #0F766E; selection-color: white; } QLineEdit:focus { border: 2px solid #0F766E; }</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addProductButton">
+           <property name="text">
+            <string>+ Add Product</string>
+           </property>
+           <property name="toolTip">
+            <string>Add a new product to inventory.</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { background: #0F766E; color: white; padding: 10px 15px; font-weight: bold; border: none; border-radius: 8px; } QPushButton:hover { background: #0D655E; } QPushButton:disabled { background: #9CA3AF; }</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="productScrollArea">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QScrollArea { background: #F3F5F7; border: none; } QScrollArea QWidget { background: #F3F5F7; }</string>
+        </property>
+        <widget class="QWidget" name="productGridWidget">
+         <property name="styleSheet">
+          <string notr="true">QWidget#productGridWidget { background: #F3F5F7; }</string>
+         </property>
+         <layout class="QGridLayout" name="productGridLayout">
+          <property name="spacing">
+           <number>12</number>
+          </property>
+          <property name="leftMargin">
+           <number>12</number>
+          </property>
+          <property name="topMargin">
+           <number>12</number>
+          </property>
+          <property name="rightMargin">
+           <number>12</number>
+          </property>
+          <property name="bottomMargin">
+           <number>12</number>
+          </property>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="historyWidget">
+        <layout class="QVBoxLayout" name="historyLayout">
+         <property name="spacing">
+          <number>8</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="historySearchEdit">
+           <property name="placeholderText">
+            <string>Search bill number or customer...</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit { background: white; border: 1px solid #E5E7EB; border-radius: 8px; padding: 10px 12px; font-size: 11pt; color: #1F2937; selection-background-color: #0F766E; selection-color: white; } QLineEdit:focus { border: 2px solid #0F766E; }</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableView" name="historyTable">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>220</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableView { background: white; color: #1F2937; alternate-background-color: #F8FAFC; gridline-color: #E5E7EB; selection-background-color: #0F766E; selection-color: white; } QTableView::item { color: #1F2937; } QTableView::item:selected:active { background: #0F766E; color: white; } QTableView::item:selected:!active { background: #0F766E; color: white; } QHeaderView::section { background: #EEF2F7; color: #1F2937; font-weight: bold; border: none; padding: 6px; }</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="historyDetailsLabel">
+           <property name="text">
+            <string>Select a bill to view its items.</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 11pt; font-weight: bold; color: #1F2937;</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableView" name="historyItemsTable">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>140</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableView { background: white; color: #1F2937; alternate-background-color: #F8FAFC; gridline-color: #E5E7EB; selection-background-color: #0F766E; selection-color: white; } QTableView::item { color: #1F2937; } QTableView::item:selected:active { background: #0F766E; color: white; } QTableView::item:selected:!active { background: #0F766E; color: white; } QHeaderView::section { background: #EEF2F7; color: #1F2937; font-weight: bold; border: none; padding: 6px; }</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="cartFrame">
+     <property name="minimumSize">
+      <size>
+       <width>320</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>360</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#cartFrame { background: #FFFFFF; border-left: 1px solid #E5E7EB; }</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <layout class="QVBoxLayout" name="cartLayout">
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <property name="topMargin">
+       <number>20</number>
+      </property>
+      <property name="rightMargin">
+       <number>20</number>
+      </property>
+      <property name="bottomMargin">
+       <number>20</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="cartTitle">
+        <property name="text">
+         <string>Shopping Cart</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 13pt; font-weight: bold; color: #1F2937;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="itemCountLabel">
+        <property name="text">
+         <string>0 Items</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #6B7280; font-weight: bold;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="customerLabel">
+        <property name="text">
+         <string>Customer</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #6B7280;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="customerComboBox">
+        <item>
+         <property name="text">
+          <string>Walk-in Customer</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableView" name="cartTableView">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>180</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTableView { background: white; color: #1F2937; alternate-background-color: #F8FAFC; gridline-color: #E5E7EB; selection-background-color: #0F766E; selection-color: white; } QTableView::item { color: #1F2937; } QTableView::item:selected:active { background: #0F766E; color: white; } QTableView::item:selected:!active { background: #0F766E; color: white; } QHeaderView::section { background: #EEF2F7; color: #1F2937; font-weight: bold; border: none; padding: 6px; }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="cartQtyRow">
+        <layout class="QHBoxLayout" name="cartQtyLayout">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="qtyDecButton">
+           <property name="text">
+            <string>− Qty</string>
+           </property>
+           <property name="toolTip">
+            <string>Decrease quantity of the selected cart row by one.</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { background: white; color: #1F2937; border: 1px solid #D1D5DB; border-radius: 8px; padding: 6px; } QPushButton:hover { background: #F3F5F7; } QPushButton:disabled { color: #9CA3AF; border-color: #E5E7EB; }</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="qtyIncButton">
+           <property name="text">
+            <string>+ Qty</string>
+           </property>
+           <property name="toolTip">
+            <string>Increase quantity of the selected cart row by one.</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { background: white; color: #1F2937; border: 1px solid #D1D5DB; border-radius: 8px; padding: 6px; } QPushButton:hover { background: #F3F5F7; } QPushButton:disabled { color: #9CA3AF; border-color: #E5E7EB; }</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="removeItemButton">
+           <property name="text">
+            <string>Remove</string>
+           </property>
+           <property name="toolTip">
+            <string>Remove the selected cart row.</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { background: white; color: #1F2937; border: 1px solid #D1D5DB; border-radius: 8px; padding: 6px; } QPushButton:hover { background: #F3F5F7; } QPushButton:disabled { color: #9CA3AF; border-color: #E5E7EB; }</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="subtotalLabel">
+        <property name="text">
+         <string>Subtotal: ₹0.00</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #1F2937;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="discountLabel">
+        <property name="text">
+         <string>Discount: ₹0.00 (disabled)</string>
+        </property>
+        <property name="toolTip">
+         <string>Discounts are disabled and always 0.</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #6B7280;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="gstLabel">
+        <property name="text">
+         <string>GST (18%): ₹0.00</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #1F2937;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="grandTotalLabel">
+        <property name="text">
+         <string>Grand Total: ₹0.00</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px; font-weight: bold; color: #0F766E;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="paymentLabel">
+        <property name="text">
+         <string>Payment Method</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #6B7280;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="paymentComboBox">
+        <property name="styleSheet">
+         <string notr="true">QComboBox#paymentComboBox { background: white; color: #1F2937; border: 1px solid #E5E7EB; border-radius: 8px; padding: 8px; selection-background-color: #0F766E; selection-color: white; } QComboBox#paymentComboBox:focus { border: 2px solid #0F766E; } QComboBox#paymentComboBox QAbstractItemView { background: white; color: #1F2937; selection-background-color: #0F766E; selection-color: white; border: 1px solid #E5E7EB; }</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Cash</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>UPI</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Card</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Other</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="completeSaleButton">
+        <property name="text">
+         <string>Complete Sale</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background: #0F766E; color: white; padding: 12px; font-weight: bold; border: none; border-radius: 8px; } QPushButton:hover { background: #0D655E; } QPushButton:disabled { background: #9CA3AF; color: white; }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="clearCartButton">
+        <property name="text">
+         <string>Clear Cart</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background: white; color: #DC2626; border: 1px solid #DC2626; padding: 10px; border-radius: 8px; } QPushButton:hover { background: #FEF2F2; } QPushButton:disabled { color: #9CA3AF; border-color: #E5E7EB; }</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
